@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(#262525, #455555);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active, .img-link) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #18abad;
+}
+
+.float-right {
+  float: right;
+}
+
+.navbar-icon {
+  width: 1.8rem;
+  border: 3px solid #18abad;
+  border-radius: 100%;
+}
+
+
+.img-link {
+  padding: 7px 20px 0 7px;
+}
+
+.img-link:hover .navbar-icon {
+  border: 3px solid #ffff;
+  border-radius: 100%;
+}
+
+.dropdown-content {
+  position: fixed;
+  background: #18abad;
+  width: 9.5rem;
+  right: 0;
+  top: 2.9rem;
+  display: none;
+}
+
+
+.profile:hover .dropdown-content {
+  display: block;
+}
+
+.sidenav {
+  height: 100%;
+  width: 16rem;
+  position: fixed;
+  z-index: 1;
+  top: 2.9rem;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.sidenav a:hover:not(.searchbar) {
+  background-color: #18abad;
+  color: #ffff;
+  text-shadow: #18abad;
+}
+
+.main {
+  margin-left: 16rem;
+  font-size: 28px;
+  padding: 5rem 2rem;
+}
+
+.search {
+  position: fixed;
+  left: 1rem;
+  border-radius: 10px;
+  width: 13rem;
+  height: 2rem;
+  top: 5rem;
+  text-align: center;
+  font-style: italic;
+  border: solid 3px ↑ Back to top
+
+}
+
+body {
+  background: #333;
+  height: 65rem;
+}
+
+.one {
+  background-image: url("../assets/1.png");
+}
+
+.two {
+  background-image: url("../assets/2.png");
+
+}
+
+.three {
+  background-image: url("../assets/3.png");
+}
+
+.four {
+  background-image: url("../assets/4.png");
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.card {
+  flex: 1;
+  height: 258px;
+  background-color: gray;
+  border-radius: 16px;
+  transition: all .3s ease;
+  overflow: hidden;
+  font-family: 'open sans';
+  font-weight: 900;
+  padding: 1rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 0 1rem;
+  background-color: #fff;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50px;
+}
+
+.card:hover:not(.artist) {
+  flex: 2;
+  background-color: #18abad;
+  cursor: pointer;
+}
+
+.artist {
+  border-radius: 50%;
+  height: 250px !important;
+  animation: normal;
+}
+
+
+.c1 {
+  background-image: url("../assets/Pink_Floyd_.jpg");
+  text-align: center;
+}
+
+.c2 {
+  background-image: url("../assets/taylor_swift.jpg");
+}
+
+.c3 {
+  background-image: url("../assets/Darshan_Raval.jpg");
+}
+
+.c4 {
+  background-image: url("../assets/shreya.jpg");
+}
+
+p {
+  color: #18abad;
+}
+
+.container {
+  position: relative;
+}
+
+.artist .text1 {
+  position: absolute;
+  top: 296px;
+  left: 85px;
+  color: white;
+  text-decoration: none;
+}
+
+.artist .text2 {
+  position: absolute;
+  top: 296px;
+  left: 373px;
+  color: white;
+  text-decoration: none;
+
+}
+
+.artist .text3 {
+  position: absolute;
+  top: 296px;
+  left: 664px;
+  color: white;
+  text-decoration: none;
+
+}
+
+.artist .text4 {
+  position: absolute;
+  top: 296px;
+  left: 967px;
+  color: white;
+  text-decoration: none;
+}
+
+.now-playing {
+  width: 80%;
+  height: 3rem;
+  position: fixed;
+  bottom: 1rem;
+  background-color: #ffff;
+  box-shadow: 0px 10px 0px 0px #18abad;
+  border-radius: 9px;
+  border: 3px solid #000;
+}
+
+.prev-track {
+  position: absolute;
+  left: 31.5rem;
+  top: 0.3rem;
+}
+
+.playpause-track {
+  position: absolute;
+  left: 37rem;
+  top: 0.3rem;
+}
+
+.next-track {
+  position: absolute;
+  left: 43rem;
+  top: 0.3rem;
+}
+
+.media-button {
+  padding: 2px 30px;
+  font-size: 1.6rem;
+  color: #18abad;
+}
+
+.nowplaying-text {
+  font-size: 17px;
+  font-family: CURSIVE;
+  display: inline;
+  position: absolute;
+  left: 1rem;
+  top: 0.85rem;
+  color: #18abad;
+}
+
+.song-details {
+  position: absolute;
+  left: 12rem;
+}
+
+.song-title {
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+
+.song-artist {
+  font-size: 12px;
+}
+
+.album-art{
+  position: absolute;
+  left: 63rem;
+  zoom: 0.13;
+  top: 1rem;
+  border: 20px solid #18abad;
+}
+
+.action-button {
+  padding: 1rem 5rem;
+  border: 3px solid;
+  border-radius: 0.7rem;
+  text-decoration: none !important;
+  font-size: 1.5rem;
+  font-family: 'Comic Sans MS';
+  cursor: pointer;
+}
+
+.jump {
+  border-color: red;
+  background: linear-gradient(to right, #eea3a3, #d65353);
+  color: #000000;
+  margin: 2rem 35rem;
+  text-align: center;
+  display: block;
+}
+
+.glyphicon {
+  margin-right: 1.2rem !important;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 5rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #18abad;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: beige;
+  text-align: center !important;
+  color: black;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  text-align: center !important;
+}
+
+@keyframes animatetop {
+  from {
+      top: -300px;
+      opacity: 0
+  }
+
+  to {
+      top: 0;
+      opacity: 1
+  }
+}
+
+.reallogin {
+  display: block;
+  margin: auto;
+  background-color: #18abad;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: #18abad;
+  color: black;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+.footer-container{
+  width: 76rem;
+  height: 530px;
+  margin-top: 100px;
+  padding-top: 20px;
+  background-color: black;  
+  color: white;
+  text-align: center;
+  font-family: 'Comic Sans MS';
+}
+
+.author-info {
+  text-align: left;
+  width: 30%;
+  font-size: 15px;
+  padding: 2rem 2rem;
+  display: table-cell;
+  font-family: 'Poppins', sans-serif;
+}
+.author-pic {
+  zoom: 0.1;
+}
+.author-name {
+  position: relative;
+  top: -68px;
+  left: 75px;
+  width: 70%;
+}

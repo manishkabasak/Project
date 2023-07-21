@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="./assets/favicon.ico">
+    
+    <title>Fotispy</title>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="#">千ㄖㄒ丨丂卩ㄚ &nbsp;&nbsp;<i class="fa fa-headphones"></i></a></li>
+        <li class="float-right profile"><a class="img-link" href="#profile"><img class="navbar-icon"
+                    src="./assets/profile.png" onclick="onclickbtn()">
+                <div class="dropdown-content">
+                    <a href="#">Edit Profile</a>
+                    <a href="#">Change Password</a>
+                    <a href="#">Logout</a>
+                </div>
+            </a>
+        </li>
+        <li class="float-right"><a href="#Settings">Settings</a></li>
+        <li class="float-right"><a href="#Help">Help</a></li>
+    </ul>
+
+
+    <div class="sidenav">
+        <a class="searchbar"><input class="search" type="text" placeholder="Search songs, artists, albums...">
+            <a href="https://open.spotify.com/" target="_blank">Liked Songs</a>
+            <a href="https://open.spotify.com/" target="_blank">Library</a>
+            <a href="https://open.spotify.com/search/podcast" target="_blank">Podcasts</a>
+            <a href="https://open.spotify.com/" target="_blank">For You</a>
+    </div>
+    <div class="main">
+        <h3 style="color: aliceblue;">FOTISPY PLAYLISTS</h3>
+        <div class="container">
+            <a class="card one" href="https://open.spotify.com/playlist/37i9dQZF1DZ06evO4gTUOY" target="_blank"><div ></div></a>
+            <a class="card two" href="https://open.spotify.com/playlist/37i9dQZF1DZ06evO20KKoE" target="_blank"><div  ></div></a>
+            <a class="card three" href="https://open.spotify.com/playlist/37i9dQZF1DWYztMONFqfvX" target="_blank"><div  ></div></a>
+            <a class="card four" href="https://open.spotify.com/album/01sfgrNbnnPUEyz6GZYlt9" target="_blank"><div  ></div></a>
+        </div>
+        <h2></h2>
+        <h3 style="color: aliceblue;">ARTISTS</h3>
+
+        <div class="container">
+            <div class="card artist c1 c">
+                <span ><a class="text1" href="https://open.spotify.com/artist/0k17h0D3J5VfsdmQ1iZtE9" target="_blank"> Pink Floyd</a></span>
+            </div>
+            <div class="card artist c2 c">
+                <span ><a class="text2" href="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02" target="_blank">Taylor Swift</a></span>
+            </div>
+            <div class="card artist c3 c">
+                <span><a class="text3" href="https://open.spotify.com/artist/2GoeZ0qOTt6kjsWW4eA6LS" target="_blank">Darshan Raval</a></span>
+            </div>
+            <div class="card artist c4 c">
+                <span><a class="text4" href="https://open.spotify.com/artist/0oOet2f43PA68X5RxKobEy" target="_blank">Shreya Ghoshal</a></span>
+            </div>
+
+        </div>
+
+        <div class="now-playing">
+            <input type="hidden" id="songState" value="paused">
+            <audio id="song-asset">
+                <source src="./assets/song.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+            <div class="nowplaying-text">
+                Now Playing <i class="fa fa-play"></i>
+            </div>
+            <div class="album-art">
+                <img src="./assets/album-art.jpg">
+            </div>
+            <div class="song-details">
+                <div class="song-title">Pigs on the Wing</div>
+                <div class="song-artist">Pink Floyd</div>
+            </div>
+
+            <div class="prev-track">
+                <button class="media-button">
+                    <i class="fa fa-step-backward"></i>
+                </button>
+            </div>
+            <div class="playpause-track">
+                <button class="media-button" onclick="playpause()">
+                    <i class="fa fa-play" id="play-icon"></i>
+                    <i class="fa fa-pause" style="display: none;" id="pause-icon"></i>
+                </button>
+
+            </div>
+            <div class="next-track">
+                <button class="media-button">
+                    <i class="fa fa-step-forward"></i>
+                </button>
+            </div>
+
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="onclickclose()">&times;</span>
+                    <h2>Login to 千ㄖㄒ丨丂卩ㄚ</h2>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="input-container">
+                            <i class="fa fa-user icon"></i>
+                            <input class="input-field" type="text" placeholder="Username or email" name="usrnm">
+                        </div>
+                        <div class="input-container">
+                            <i class="fa fa-key icon"></i>
+                            <input class="input-field" type="password" placeholder="Password" name="psw">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a class="action-button reallogin" id="myBtn" href="./index.html"
+                        onclick="alert('Logged in successfully! Redirecting to main page...')">LOG IN
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-container">
+            CREATED BY
+                <div class="author-info"> 
+                    <div class="author-pic">
+                        <img src="./assets/sampy.jpg">
+                    </div>
+                    <div class="author-name">
+                        <b>Sampreeti Basu Mallick</b><br>
+                        Computer Science & Engineering - AIML, 2nd Year,<br>
+                        Meghnad Saha Institute of Technology, Kolkata.
+                    </div>
+                </div>
+                <div class="author-info"> 
+                    <div class="author-pic">
+                        <img src="./assets/lilpingu.jpg">
+                    </div>
+                    <div class="author-name">
+                        <b>Manishka Basak</b><br>
+                        Computer Science & Engineering - AIML, 2nd Year,<br>
+                        Meghnad Saha Institute of Technology, Kolkata.
+                    </div>
+                </div>
+                <div class="author-info"> 
+                    <div class="author-pic">
+                        <img src="./assets/mamahen.jpg">
+                    </div>
+                    <div class="author-name">
+                        <b>Moumita Bag</b><br>
+                        Computer Science & Engineering - AIML, 2nd Year,<br>
+                        Meghnad Saha Institute of Technology, Kolkata.
+                    </div>
+                </div>
+                Inspired by <i class="fa fa-spotify" style="font-size:38px;color:green"></i><a href="https://open.spotify.com/" style="text-decoration: none;" target="_blank"> <span style=" color: #ffffff !important;"> Spotify :)</span></a><br><br>
+                <div id="topButton" onclick="backtoTop()" style="text-decoration: none; color: #18abad; font-size: 18px; margin-top: 10px; cursor: pointer;">&uarr; Back to top </div><br>
+                <div style="text-decoration: none; color: #f8fafa; font-size: 15px; margin-top: 10px;">&#169; Copyright 2023-2034 </div>
+        
+            </div>
+            <script type="application/javascript" src="js/script.js"></script>
+</body>
+
+</footer>
+</html>
